@@ -18,13 +18,15 @@ if(isset($_POST['login']) and $_POST['login']!="" and $_POST['senha']!=""){
       echo "<br />login ok";
       session_start();
       $_SESSION["login"] = $login;
-      echo "<br />Login é: " . $_SESSION["login"];
+      echo "<br />Seja Bem Vindo(a): " . $_SESSION["login"];
+      header( "refresh:3;url=home.php" );
     }else{
       echo "<br />senha incorreta";
     }
     
   }else{
     echo "<br />Login incorreto";
+    header( "refresh:2;url=index.php" );
   }
 
   

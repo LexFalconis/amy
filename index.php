@@ -1,2 +1,2 @@
 <?php
-include"chk_login.php";
+include"login.php";

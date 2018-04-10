@@ -31,6 +31,20 @@ body{
   min-width: 25px;
   height: 40px;
 }
+.nav .menu button{
+  width: 20px;
+  background-color: #fff;
+}
+.nav .menu li img{
+  width: 25px;
+}
+.nav .menu li a{
+  text-decoration: none;
+}
+.nav .menu li a:hover{
+  color: #fff;
+}
+
 .footer{
   background-color: #D8D8D8;
   width: 100%;
