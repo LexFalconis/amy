@@ -1,0 +1,9 @@
+body{
+  width: 100%;
+  text-align: center;
+}
+
+form.login{
+  width: 300px;
+  overflow: hidden;
+}
