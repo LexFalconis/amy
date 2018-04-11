@@ -5,7 +5,8 @@ vertical-align:baseline;
 list-style:none;
 border:0
 }
-.bar{height:1200px; background-color: #f2f2f2;}
+.bar{height:1200px; background-color: #f2f2f2; /*background-image: url("imgs/evento.png");*/
+  min-height: 100%;}
 body{
   font: 400 15px/1.8 "Lato", sans-serif;
   margin: 0px;
@@ -44,7 +45,13 @@ body{
 .nav .menu li a:hover{
   color: #fff;
 }
-
+.content{
+  margin: auto;
+  background-image: url("images/kids1.png");
+  min-height: 100%;
+  width: 960px;
+  background-color: #D8D8D8;
+}
 .footer{
   background-color: #D8D8D8;
   width: 100%;

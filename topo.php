@@ -1,4 +1,4 @@
-<?php include"chk_login.php" ?>
+<?php session_start(); include"chk_login.php" ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +10,7 @@
   <div class="nav">
     <ul class="menu" id="menu">
       <li>Home</li>
-      <li>Fotos</li>
+      <li><a href="fotos.php">Fotos</a></li>
       <li>Videos</li>
       <li>Eventos</li>
       <li><a href="logout.php" title="Já vai <?php echo $_SESSION['login']; ?> ?">Sair</a></li>
@@ -18,7 +18,7 @@
     </ul>
     <ul class="menu" id="menu" style="display:none; width: 200px;">
       <li><img src="imgs/home.png"></li>
-      <li><img src="imgs/fotos.jpg"></li>
+      <li><a href="fotos.php"><img src="imgs/fotos.jpg"></a></li>
       <li><img src="imgs/video.png"></li>
       <li><img src="imgs/evento.png"></li>
       <li><a href="logout.php" title="Já vai <?php echo $_SESSION['login']; ?> ?"><img src="imgs/sair.png"></a></li>
@@ -30,3 +30,4 @@ $( "button" ).click(function() {
 });
 </script>
   </div>
+<div class="content">
