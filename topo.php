@@ -1,4 +1,4 @@
-<?php session_start(); include"chk_login.php" ?>
+<?php include"chk_login.php" ?>
 <!DOCTYPE html>
 <html>
 <head>
