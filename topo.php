@@ -13,7 +13,7 @@
       <li><a href="fotos.php">Fotos</a></li>
       <li>Videos</li>
       <li>Eventos</li>
-      <li><a href="logout.php" title="Já vai <?php echo $_SESSION['login']; ?> ?">Sair</a></li>
+      <li><a href="logout.php?log=x" title="Já vai <?php echo $_SESSION['login']; ?> ?">Sair</a></li>
       <li><button>-</button></li>
     </ul>
     <ul class="menu" id="menu" style="display:none; width: 200px;">
@@ -21,7 +21,7 @@
       <li><a href="fotos.php"><img src="imgs/fotos.jpg"></a></li>
       <li><img src="imgs/video.png"></li>
       <li><img src="imgs/evento.png"></li>
-      <li><a href="logout.php" title="Já vai <?php echo $_SESSION['login']; ?> ?"><img src="imgs/sair.png"></a></li>
+      <li><a href="logout.php?log=x" title="Já vai <?php echo $_SESSION['login']; ?> ?"><img src="imgs/sair.png"></a></li>
       <li><button>+</button></li>
     </ul>
 <script>

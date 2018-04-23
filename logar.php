@@ -23,15 +23,17 @@ if(isset($_POST['login']) and $_POST['login']!="" and $_POST['senha']!=""){
       exit;
     }else{
       echo "<br />senha incorreta";
+      header( "refresh:3;url=login.php" );
     }
 
   }else{
     // echo "<br />Login incorreto";
-    header( "refresh:2;url=index.php" );
+    header( "refresh:2;url=login.php" );
     exit;
   }
 
 
 } else {
   echo "NO Post";
+  header("refresh:3;url=index.php");
 }
