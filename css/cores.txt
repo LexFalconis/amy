@@ -1,0 +1,6 @@
+Mod 1
+#FFFFFF // bg geral / link hover
+#CF7DCC // link menu
+#A63EA3 // fonte rodapé
+#5D225B // fonte geral
+#3A1C39 // bg rodapé
