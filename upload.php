@@ -25,11 +25,11 @@ else { echo "A Pasta Existe<br>";
 			$arquivo = isset($_FILES['arquivo']) ? $_FILES['arquivo'] : FALSE;
 				for ($k = 0; $k < count($arquivo['name']); $k++)
 					{
-					   $destino = $diretorio."/".$arquivo['name'][$k];
+					   $destino = $diretorio."/".date("Y-m-d H:i:s").$arquivo['name'][$k];
 
-					    if (move_uploaded_file($arquivo['tmp_name'][$k], $destino)) {echo "MOVEUUUUUU<br>"; header( "refresh:3;url=fotos.php" ); }
+					    if (move_uploaded_file($arquivo['tmp_name'][$k], $destino)) {echo "<br />MOVEUUUUUU<br>"; header( "refresh:3;url=fotos.php" ); }
 
-					    else {echo $arquivo['name'][$k] .": NAOOOO MOVEU";}
+					    else {echo $arquivo['name'][$k] .": NAOOOO MOVEU<br />";}
 					}		
 
-} // fecha else
+}

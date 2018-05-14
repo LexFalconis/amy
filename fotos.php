@@ -1,6 +1,7 @@
 <?php include "topo.php"; ?>
 <div class="fotos">
-  
+  <h1>Fotinhas, ebaaaa...</h1>
+  <h2>...Quando papai e mamãe quiserem só jogar umas fotinhas novas pra galera, elas estarão aqui nessa página :-)</h2>
 <?php
 
 /*$dir = "/home/cabox/workspace/amy/fotos/";
@@ -19,7 +20,7 @@ foreach (glob ($dir."*", GLOB_ONLYDIR) as $pastas) {
 
 foreach($img as $img){
   $img_exib = str_replace("/home/cabox/workspace/amy/","",$img);
-  echo '<a href="'.$img_exib.'"><img src="'.$img_exib.'" /></a>';
+  echo '<a href="ver.php?loc='.$img_exib.'"><img src="'.$img_exib.'" /></a>';
 }
   /*$caminho = "/home/cabox/workspace/amy/fotos/img_upload/";
   $img = glob($caminho."*.{jpg,png,gif}", GLOB_BRACE);
@@ -29,7 +30,7 @@ foreach($img as $img){
   }*/
 
 ?>
-  <span>&nbsp;</span>
+  
   <p>
     Lorum Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </p>

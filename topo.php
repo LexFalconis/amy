@@ -9,30 +9,30 @@
 <body>
   <div class="nav">
     <ul class="menu" id="menu">
-      <li><a href="home.php">Home</a></li>
-      <li><a href="fotos.php">Fotos</a></li>
-      <li>Videos</li>
-      <li>Eventos</li>
-      <li><a href="logout.php?log=x" title="Já vai <?php echo $_SESSION['login']; ?> ?">Sair</a></li>
+      <li><a href="home.php"><img src="imgs/home.png"/><p>Home</p></a></li>
+      <li><a href="fotos.php"><img src="imgs/fotos.png"/><p>Fotos</p></a></li>
+      <!--li><a href="#"><img src="imgs/video.png"/><p>Videos</p></a></li>
+      <li><a href="#"><img src="imgs/evento.png"/><p>Eventos</p></a></li-->
       <?php
       if($_SESSION["acesso"]=="1"){
-        echo "<li><a href='up.php'>UP!</a></li>";
+        echo "<li><a href='up.php'><img src='imgs/up.png'/><p>UP!</p></a></li>";
       }
       ?>
-      <li><button>-</button></li>
+      <li><a href="logout.php?log=x" title="Já vai <?php echo $_SESSION['login']; ?> ?"><img src="imgs/sair.png"/><p>Sair</p></a></li>
+      <!--li><img src="imgs/altmenu.png" class="button"></li-->
     </ul>
-    <ul class="menu" id="menu" style="display:none; width: 200px;">
-      <li><a href="home.php"><img src="imgs/home.png"></a></li>
-      <li><a href="fotos.php"><img src="imgs/fotos.jpg"></a></li>
-      <li><img src="imgs/video.png"></li>
-      <li><img src="imgs/evento.png"></li>
-      <li><a href="logout.php?log=x" title="Já vai <?php echo $_SESSION['login']; ?> ?"><img src="imgs/sair.png"></a></li>
-      <li><button>+</button></li>
-    </ul>
-<script>
-$( "button" ).click(function() {
+    <!--ul class="menu" id="menu" style="display:none; width: 200px;">
+      <li><a href="home.php"><img src="imgs/home.png" title="Home"></a></li>
+      <li><a href="fotos.php"><img src="imgs/fotos.png" title="Fotos"></a></li>
+      <li><img src="imgs/video.png" title="Videos"></li>
+      <li><img src="imgs/evento.png" title="Eventos"></li>
+      <li><a href="logout.php?log=x" title="Sair: Já vai < ?php echo $_SESSION['login']; ?> ?"><img src="imgs/sair.png"></a></li>
+      <li><img src="imgs/altmenu.png" title="Alterar aparência do menu" class="button"></li>
+    </ul-->
+<!--script>
+$( ".button" ).click(function() {
   $( "ul.menu" ).toggle();
 });
-</script>
+</script-->
   </div>
 <div class="content">
