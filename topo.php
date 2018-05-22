@@ -1,8 +1,14 @@
-<?php include"chk_login.php"; ?>
+<?php /*echo "<pre>";
+    print_r($_SERVER);
+    echo "</pre><hr>";
+echo "<pre>";
+    echo $_SERVER["HTTP_HOST"];
+    echo "</pre><hr>";*/
+include"chk_login.php"; ?>
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="http://<?php echo $_SERVER["HTTP_HOST"]; ?>/amy/css/style.css" />
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
@@ -19,20 +25,7 @@
       }
       ?>
       <li><a href="logout.php?log=x" title="Já vai <?php echo $_SESSION['login']; ?> ?"><img src="imgs/sair.png"/><p>Sair</p></a></li>
-      <!--li><img src="imgs/altmenu.png" class="button"></li-->
     </ul>
-    <!--ul class="menu" id="menu" style="display:none; width: 200px;">
-      <li><a href="home.php"><img src="imgs/home.png" title="Home"></a></li>
-      <li><a href="fotos.php"><img src="imgs/fotos.png" title="Fotos"></a></li>
-      <li><img src="imgs/video.png" title="Videos"></li>
-      <li><img src="imgs/evento.png" title="Eventos"></li>
-      <li><a href="logout.php?log=x" title="Sair: Já vai < ?php echo $_SESSION['login']; ?> ?"><img src="imgs/sair.png"></a></li>
-      <li><img src="imgs/altmenu.png" title="Alterar aparência do menu" class="button"></li>
-    </ul-->
-<!--script>
-$( ".button" ).click(function() {
-  $( "ul.menu" ).toggle();
-});
-</script-->
   </div>
+  <div class="break"></div>
 <div class="content">

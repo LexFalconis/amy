@@ -14,13 +14,13 @@ foreach (glob ($dir."*", GLOB_ONLYDIR) as $pastas) {
 	}
 }*/
 
- $caminho = "/home/cabox/workspace/amy/img_upload/";
-        $img = glob($caminho."*.{jpg,png,gif}", GLOB_BRACE);
+ $caminho = "/home/cabox/workspace/amy/up/uploads/thumbs/";
+        $img = glob($caminho."*.{jpeg,JPG,jpg,png,gif}", GLOB_BRACE);
         $contador = count($img);
 
 foreach($img as $img){
   $img_exib = str_replace("/home/cabox/workspace/amy/","",$img);
-  echo '<a href="ver.php?loc='.$img_exib.'"><img src="'.$img_exib.'" /></a>';
+  echo '<a href="ver.php?loc='.str_replace("up/uploads/thumbs/","up/uploads/",$img_exib).'"><img src="'.$img_exib.'" /></a>';
 }
   /*$caminho = "/home/cabox/workspace/amy/fotos/img_upload/";
   $img = glob($caminho."*.{jpg,png,gif}", GLOB_BRACE);

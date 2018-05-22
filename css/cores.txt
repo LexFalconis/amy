@@ -1,5 +1,6 @@
 Imagem: https://pt.stackoverflow.com/questions/54257/como-comprimir-imagens-no-php
 Email: https://www.hostinger.com.br/tutoriais/aprenda-a-utilizar-o-smtp-google/
+CSS media queries: http://sergiolopes.org/media-queries-conteudo/
 
 
 Mod 1
@@ -8,3 +9,10 @@ Mod 1
 #A63EA3 // fonte rodapé
 #5D225B // H1...
 #3A1C39 // bg rodapé
+
+
+
+
+git add -A
+git commit -m "descrição do commit"
+git push -u origin master

@@ -13,6 +13,7 @@ body{
   width: 100%;
   /*background-color: #FFE4E1;*/
 }
+
 .nav{
   margin: auto;
   position: relative;
@@ -102,3 +103,53 @@ h3{font-size: 17px;}
 .upload{
   padding-top: 100px;
 }
+
+
+@media only screen and (max-width: 62em) {
+  .break{height:140px;}
+  .nav{
+    margin-bottom: 150px;
+    position: fixed;
+    height: 140px;
+    overflow: hidden;
+    width: 100%;
+    /*background-color: yellow;*/
+  }
+  .nav .menu{/* barra de menu*/
+    min-width: 460px;
+    height: 135px;/*background-color: red;*/
+    overflow: hidden;
+  }
+  .nav .menu ul{}
+  .nav .menu li{
+    font-size: 30px;
+    margin: 4px auto auto 8px;
+    float: left;
+    min-width: 25px;
+    height: 100px;
+  }
+  .nav .menu li:hover{
+  }
+  .nav .menu li img{
+    width: 100px;
+  }
+  .nav .menu li a{
+  }
+  .nav .menu li a:hover{
+  }
+  .nav .menu li a p{
+    margin-top: -30px;
+  }
+  .fotos a img{
+    margin: 5px;
+    min-height: 150px;
+    min-width: 150px;
+    max-height: 200px;
+    max-width: 200px;
+  }
+} /* 1312px */
+/*@media (min-width: 37em) { ... } 592px */
+/*@media (min-width: 41em) { ... } 656px */
+/*@media (min-width: 47em) { ... } 752px */
+/*@media (min-width: 68em) { ... } 1088px */
+/*@media (min-width: 100em) { ... } 1600px */
