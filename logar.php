@@ -3,7 +3,7 @@ if(isset($_POST['login']) and $_POST['login']!="" and $_POST['senha']!=""){
   // echo "<br />Post OK";
   $login = $_POST['login'];
   $senha = $_POST['senha'];
-  include "con.php";
+  include "conn.php";
   $sqlUser = 'SELECT * FROM usuarios WHERE LOGIN = "' . $login. '"';
   try{
     $read = $db->prepare($sqlUser);

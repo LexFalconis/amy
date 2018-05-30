@@ -17,8 +17,8 @@ include"chk_login.php"; ?>
     <ul class="menu" id="menu">
       <li><a href="home.php"><img src="imgs/home.png"/><p>Home</p></a></li>
       <li><a href="fotos.php"><img src="imgs/fotos.png"/><p>Fotos</p></a></li>
-      <!--li><a href="#"><img src="imgs/video.png"/><p>Videos</p></a></li>
-      <li><a href="#"><img src="imgs/evento.png"/><p>Eventos</p></a></li-->
+      <li><a href="videos.php"><img src="imgs/video.png"/><p>Videos</p></a></li>
+      <!--li><a href="#"><img src="imgs/evento.png"/><p>Eventos</p></a></li-->
       <?php
       if($_SESSION["acesso"]=="1"){
         echo "<li><a href='up.php'><img src='imgs/up.png'/><p>UP!</p></a></li>";

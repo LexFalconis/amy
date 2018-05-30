@@ -6,17 +6,31 @@ if($_SESSION["acesso"]<>"1"){
 include "topo.php";
 ?>
 <div class="upload">
- <form id="" action="up/upload.php" method="post" enctype="multipart/form-data">
-    
-      <label>Imagens jpg,png,gif preferencialmente</label><br />
-      <input type="hidden" name="MAX_FILE_SIZE" value="104857600">
-   <input type="hidden" name="max_input_time" value="1000000">
-   <input type="hidden" name="memory_limit" value="10737418240">
-   <input type="hidden" name="post_max_size" value="10737418240">
-   <input type="hidden" name="upload_max_filesize" value="10737418240">
-  
-      <input type="file" name="upload_images[]" id="image_file" multiple="multiple"><br />
-    <input type="submit" value="Cadastrar"/> 
+  <form id="" action="up/upload.php" method="post" enctype="multipart/form-data">
+    <label>Imagens jpg,png,gif preferencialmente</label><br />
+    <input type="hidden" name="MAX_FILE_SIZE" value="104857600">
+    <input type="hidden" name="max_input_time" value="1000000">
+    <input type="hidden" name="memory_limit" value="10737418240">
+    <input type="hidden" name="post_max_size" value="10737418240">
+    <input type="hidden" name="upload_max_filesize" value="10737418240">
+
+    <input type="file" name="upload_images[]" id="image_file" multiple="multiple"><br />
+
+    <input type="submit" value="Enviar fotos"/> 
+  </form>
+</div>
+
+<div class="upload">
+  <form id="" action="up/uploadV.php" method="post" enctype="multipart/form-data">
+    <label>Envie preferencialmente video em MP4</label><br />
+    <input type="hidden" name="MAX_FILE_SIZE" value="0">
+    <input type="hidden" name="max_input_time" value="0">
+    <input type="hidden" name="memory_limit" value="0">
+    <input type="hidden" name="post_max_size" value="0">
+    <input type="hidden" name="upload_max_filesize" value="0">
+
+    <input type="file" name="upload_video"><br />
+    <input type="submit" value="Enviar video"/> 
   </form>
 </div>
 

@@ -25,7 +25,7 @@ body{
 .nav .menu{/* barra de menu*/
   border-radius: 7px;
   margin: 3px auto;
-  max-width: 140px;
+  max-width: 180px;
   height: 40px;
   text-align: center;
   /*background-color: #5D225B;*/
@@ -82,7 +82,7 @@ a.voltar:hover{color: #CF7DCC;}
   bottom:0; margin-bottom 0px;  
 }
 .home{min-height: 800px; /*background-color: #f2f2f2; /*background-image: url("imgs/evento.png");*/ min-height: 100%;}
-.fotos, .home, .ver_foto{
+.videos, .fotos, .home, .ver_foto{
   padding-top: 30px;
   width: 90%;
   /*min-height: 800px;*/
@@ -95,6 +95,13 @@ a.voltar:hover{color: #CF7DCC;}
   margin: 5px;
   max-height: 100px;
   max-width: 100px;
+}
+.videos{
+  text-align: center;
+}
+.videos iframe{
+  width: 854px;
+  height: 480px;
 }
 h1, h2, h3{text-align: center; color:#5D225B}
 h1{font-size: 27px;}
