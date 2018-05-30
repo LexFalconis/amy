@@ -22,15 +22,17 @@ include "topo.php";
 
 <div class="upload">
   <form id="" action="up/uploadV.php" method="post" enctype="multipart/form-data">
-    <label>Envie preferencialmente video em MP4</label><br />
-    <input type="hidden" name="MAX_FILE_SIZE" value="0">
-    <input type="hidden" name="max_input_time" value="0">
-    <input type="hidden" name="memory_limit" value="0">
-    <input type="hidden" name="post_max_size" value="0">
-    <input type="hidden" name="upload_max_filesize" value="0">
+    <label>Envie primeiro um video para o youtube, depois insira aqui os dados dele</label><br />
+    <input type="text" name="link" placeholder="Digite aqui o endereço do video do youtube..." /><br />
+    <input type="text" name="descricao" placeholder="Coloque aqui uma pequena descrição para o video..." /><br />
+    Video já estará ativo no site ?<br />
+    <input type="radio" name="status" value="1" />Sim&nbsp;&nbsp;&nbsp;
+    <input type="radio" name="status" value="2" />Não<br /><br />
+    Quem poderá ver o video aqui ?<br />
+    <input type="radio" name="permissao" Value="1" />Todos podem ver &nbsp;&nbsp;&nbsp;
+    <input type="radio" name="permissao" Value="2" />Apenas familia<br /><br />
 
-    <input type="file" name="upload_video"><br />
-    <input type="submit" value="Enviar video"/> 
+    <input type="submit" value="Cadastrar video"/> 
   </form>
 </div>
 

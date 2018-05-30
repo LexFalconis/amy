@@ -14,7 +14,7 @@ foreach (glob ($dir."*", GLOB_ONLYDIR) as $pastas) {
 					echo "";
 	}
 }*/
-  $sqlRead = 'SELECT * FROM videos order by id ASC';
+  $sqlRead = 'SELECT * FROM videos order by id DESC';
   try{
     $read = $db->prepare($sqlRead);
     $read->execute();
@@ -23,8 +23,16 @@ foreach (glob ($dir."*", GLOB_ONLYDIR) as $pastas) {
   }
   while($rs = $read->fetch(PDO::FETCH_OBJ)){
     /*print_r($rs);*/
+    if($_SESSION["acesso"]=="1"){
+      echo "<a href='up/delV.php?idv=" . $rs->id . "'>Deletar Video</a>";
+    }
   ?>
-    <iframe src="<?=$rs->link?>"
+    <iframe src="<?php
+    if ($link=str_replace("https://www.youtube.com/watch?v=","https://www.youtube.com/embed/",$rs->link)){
+      echo $link;
+    } else {
+      echo $rs->link;
+    }?>"
              frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
     </iframe>
   <?=$rs->descricao?>

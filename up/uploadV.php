@@ -3,23 +3,31 @@
   &nbsp;
 </p>
 <?php include"../chk_login.php";
-
-$diretorio = "uploads/video";
-print_r($_FILES["upload_video"]);
-if (!is_dir($diretorio)){
-  echo "A pasta $diretorio nao existe...";
-} else {
-  echo"A pasta Existe!!!<br>";
-
-  $arquivo=$_FILES["upload_video"];
-  $destino = $diretorio."/".$arquivo['name'];
-
-  if (move_uploaded_file($arquivo['tmp_name'],$destino)) {
-    echo "MOVEUUUUUU<br>";
-  } else {
-    echo "NAOOOO MOVEU";
-    print_r($arquivo['tmp_name']);
+include"../conn.php";
+if($_POST){
+  $link = $_POST["link"];
+  $descricao = $_POST["descricao"];
+  $status = $_POST["status"];
+  $permissao = $_POST["permissao"];
+  $sql = 'INSERT INTO videos (LINK, DESCRICAO, STATUS, VER_PERMISS)';
+  $sql .= 'VALUES (:link, :descricao, :status, :permissao)';
+  
+  try{
+    $create = $db->prepare($sql);
+    $create->bindValue(':link', $link, PDO::PARAM_STR);
+    $create->bindValue(':descricao', $descricao, PDO::PARAM_STR);
+    $create->bindValue(':status', $status, PDO::PARAM_INT);
+    $create->bindValue(':permissao', $permissao, PDO::PARAM_INT);
+    if($create->execute()){
+      echo "<script>alert('Inserido com sucesso!');</script>";
+      exit();
+    }
+  }catch(PDOException $e){
+    echo $e->getMessage();
+    exit();
   }
-
+} else {
+  echo "sem post";
+  header("refresh:3;url=../videos.php");
 }
-?>
+ /*Textos completos 	id 	link 	descricao 	status 	ver_permiss
