@@ -13,6 +13,7 @@ include"chk_login.php"; ?>
 </head>
 
 <body>
+  <div class="backnav">
   <div class="nav">
     <ul class="menu" id="menu">
       <li><a href="home.php"><img src="imgs/home.png"/><p>Home</p></a></li>
@@ -26,6 +27,7 @@ include"chk_login.php"; ?>
       ?>
       <li><a href="logout.php?log=x" title="Já vai <?php echo $_SESSION['login']; ?> ?"><img src="imgs/sair.png"/><p>Sair</p></a></li>
     </ul>
+  </div>
   </div>
   <div class="break"></div>
 <div class="content">

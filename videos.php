@@ -21,10 +21,11 @@ foreach (glob ($dir."*", GLOB_ONLYDIR) as $pastas) {
   } catch(PDOException $e){
     echo $e->getMessage();
   }
+  echo "<p>&nbsp;</p>";
   while($rs = $read->fetch(PDO::FETCH_OBJ)){
     /*print_r($rs);*/
     if($_SESSION["acesso"]=="1"){
-      echo "<a href='up/delV.php?idv=" . $rs->id . "'>Deletar Video</a>";
+      echo "<a href='up/delV.php?idv=" . $rs->id . "'>Deletar Video</a><br />";
     }
   ?>
     <iframe src="<?php
@@ -34,8 +35,10 @@ foreach (glob ($dir."*", GLOB_ONLYDIR) as $pastas) {
       echo $rs->link;
     }?>"
              frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
-    </iframe>
+    </iframe><br />
   <?=$rs->descricao?>
+  <p>&nbsp;</p>
+  <center><hr></center>
   <p>&nbsp;</p>
   <?php } ?>
 </div>
